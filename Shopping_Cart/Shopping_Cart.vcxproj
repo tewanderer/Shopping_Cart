@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ShoppingCart.h" />
+    <ClInclude Include="ItemToPurchase.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="ShoppingCart.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ItemToPurchase.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

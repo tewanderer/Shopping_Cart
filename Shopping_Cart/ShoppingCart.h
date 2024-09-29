@@ -1,22 +1,26 @@
 #pragma once
+#include "ItemToPurchase.h"
 #include <string>
+#include <vector>
 using namespace std;
 
-class ItemToPurchase {
-public:
-    ItemToPurchase();
-    void SetName(string name);
-    void SetPrice(int price);
-    void SetQuantity(int quantity);
-
-    string GetName();
-    int GetPrice();
-    int GetQuantity();
-
+class ShoppingCart
+{
 private:
-    string itemName;
-    int itemPrice;
-    int itemQuantity;
+    string customerName;
+    string currentDate;
+    vector<ItemToPurchase>cartitems;
 
+public:
+    ShoppingCart();
+    ShoppingCart(string name, string date);
+    string GetCustomerName();
+    string GetDate();
+    void AddItem(ItemToPurchase item);
+    void RemoveItem(string item);
+    int GetNumItemsInCart();
+    int GetCostOfCart();
+    void PrintTotal();
+    void PrintDescriptions();
 };
 
